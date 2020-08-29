@@ -15,16 +15,17 @@ class Director:
         return f"<Director {self.__director_full_name}>"
 
     def __eq__(self, other):
-        # TODO
-        pass
+        test1 = self.__director_full_name
+        test2 = other.__director_full_name
+        return test1 == test2
 
     def __lt__(self, other):
-        # TODO
-        pass
+        test1 = self.__director_full_name
+        test2 = other.__director_full_name
+        return test1 < test2
 
     def __hash__(self):
-        # TODO
-        pass
+        return 0
 
 
 class TestDirectorMethods:
@@ -36,3 +37,12 @@ class TestDirectorMethods:
         assert director2.director_full_name is None
         director3 = Director(42)
         assert director3.director_full_name is None
+
+
+	
+director1 = Director("Cameron Diaz")
+director2 = Director("Angelina Jolie")
+director3 = Director("Brad Pitt")
+print(director1 > director2)
+print(director1 > director3)
+print(director2 < director3
